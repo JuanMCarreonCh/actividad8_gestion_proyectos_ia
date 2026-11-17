@@ -1,0 +1,4 @@
+epoch,phase,alert_id,name,severity,value,slo_target,burn_rate,action
+7,FASE 2,ALT-001,SLO Latencia p95 Inferencia,P1,178.039,50.0,14.4,Ejecución inmediata de Runbook automatizado y llamado a guardia SRE/MLOps (PagerDuty).
+8,FASE 2,ALT-001,SLO Latencia p95 Inferencia,P1,164.905,50.0,14.4,Ejecución inmediata de Runbook automatizado y llamado a guardia SRE/MLOps (PagerDuty).
+9,FASE 2,ALT-001,SLO Latencia p95 Inferencia,P1,158.031,50.0,14.4,Ejecución inmediata de Runbook automatizado y llamado a guardia SRE/MLOps (PagerDuty).

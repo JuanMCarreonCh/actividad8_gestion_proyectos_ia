@@ -1,0 +1,51 @@
+[
+  {
+    "incident_id": "INC-LAT-1794884615",
+    "title": "Saturaci\u00f3n Cr\u00edtica de Latencia por Pico de Tr\u00e1fico Concurrente",
+    "severity": "P1",
+    "runbook_id": "RB-01",
+    "duration_min": 4.2,
+    "initial_metrics": {
+      "latency_p95_ms": 178.039,
+      "cpu_usage_pct": 94.0,
+      "active_replicas": 2
+    },
+    "restored_metrics": {
+      "latency_p95_ms": 16.4,
+      "cpu_usage_pct": 38.0,
+      "active_replicas": 6
+    },
+    "steps": [
+      "Diagn\u00f3stico de Saturaci\u00f3n de Recursos",
+      "Autoescalado Horizontal de Pods (HPA)",
+      "Activaci\u00f3n de Cach\u00e9 de Inferencia Redis",
+      "Verificaci\u00f3n de Conectividad y Health Check",
+      "Validaci\u00f3n de Restauraci\u00f3n de SLO"
+    ]
+  },
+  {
+    "incident_id": "INC-DRIFT-1794884616",
+    "title": "Degradaci\u00f3n de Desempe\u00f1o por Deriva Severa de Datos (Data Drift)",
+    "severity": "P2",
+    "runbook_id": "RB-02",
+    "duration_min": 9.5,
+    "initial_metrics": {
+      "data_drift_psi": 2.2717,
+      "f1_score": 0.8102692307692309,
+      "model_version": "v1.0.0"
+    },
+    "restored_metrics": {
+      "data_drift_psi": 0.052,
+      "f1_score": 0.912,
+      "model_version": "v2.0.0"
+    },
+    "steps": [
+      "Activaci\u00f3n de Fallback Clasificador Seguro",
+      "Extracci\u00f3n y Filtrado de Datos de Producci\u00f3n Recientes",
+      "Disparo de Pipeline de Reentrenamiento en MLflow",
+      "Ejecuci\u00f3n de Test Suite y Validaci\u00f3n de Calidad",
+      "Despliegue Canary Progresivo (10% -> 50% -> 100%)",
+      "Verificaci\u00f3n Final de Estabilidad y Desempe\u00f1o"
+    ]
+  }
+]

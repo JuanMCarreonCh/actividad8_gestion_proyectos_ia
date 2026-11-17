@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-11-17T03:03:37.000Z",
+  "request_id": "req-7d16da28f8",
+  "trace_id": "trace-97c8170a4e7e",
+  "model_name": "DistilBERT-MexBan-Sentiment",
+  "model_version": "v1.0.0",
+  "channel": "mobile_banking",
+  "input_char_len": 62,
+  "token_count": 11,
+  "prediction": "Negativo",
+  "confidence": 0.9342,
+  "probabilities": {
+    "Positivo": 0.0329,
+    "Negativo": 0.9342,
+    "Neutro": 0.0329
+  },
+  "latency_ms": 18.34,
+  "http_status": 200,
+  "pii_masked": true,
+  "spans": [
+    {
+      "span_id": "span-2b2e3b9a",
+      "parent_span_id": "span-root-c713c1a9",
+      "name": "api_gateway",
+      "duration_ms": 0.92,
+      "status": "OK"
+    },
+    {
+      "span_id": "span-49534afc",
+      "parent_span_id": "span-root-c713c1a9",
+      "name": "pii_sanitizer",
+      "duration_ms": 0.73,
+      "status": "OK"
+    },
+    {
+      "span_id": "span-83881001",
+      "parent_span_id": "span-root-c713c1a9",
+      "name": "tokenization",
+      "duration_ms": 2.2,
+      "status": "OK"
+    },
+    {
+      "span_id": "span-631e5897",
+      "parent_span_id": "span-root-c713c1a9",
+      "name": "model_inference",
+      "duration_ms": 13.57,
+      "status": "OK"
+    },
+    {
+      "span_id": "span-6ce3e7ec",
+      "parent_span_id": "span-root-c713c1a9",
+      "name": "postprocessing_rules",
+      "duration_ms": 0.92,
+      "status": "OK"
+    }
+  ]
+}
